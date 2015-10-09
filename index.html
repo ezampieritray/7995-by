@@ -41,14 +41,14 @@
                 <div id="clients">Соблюдение бюджета</div>
                 <div id="warranty">100% гарантия</div>
             </section>
-            <form>
+            <form action="https://mandrillapp.com/api/1.0/messages/send.json">
                 <div id="form-desc">Сколько будет стоить ремонт моего устройства? Оставьте название модели и вид неисправности и наш специалист рассчитает стоимость ремонта и свяжется с вами</div>
                 <div id="form">
-                    <div>Модель устройства:</div><input type="text">
-                    <div>Что случилось?</div><textarea rows="5" cols="50"></textarea>
-                    <div>Имя:</div><input type="text">
-                    <div>Телефон:</div><input type="text">
-                    <div><button>Узнать стоимость</button></div>    
+                    <div>Модель устройства:</div><input type="text" id="model">
+                    <div>Что случилось?</div><textarea rows="5" cols="50" id="problem"></textarea>
+                    <div>Имя:</div><input type="text" id="name">
+                    <div>Телефон:</div><input type="text" id="phone">
+                    <div><div class="action-button" onclick="send()">Узнать стоимость</div></div>    
                 </div>
             </form>
             <h2>Отзывы</h2>
