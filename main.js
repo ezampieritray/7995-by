@@ -21,11 +21,35 @@ ymaps.ready(function() {
 });
 
 function reviewLeft() {
+    var currentId = document.getElementsByClassName('shows')[0].id;
+    var currentClassList = document.getElementsByClassName('shows')[0].classList;
+    toggleVisabilityOfOneReview(currentClassList);
 
+    if (currentId > 1) {
+        var hiddenClassList = document.getElementById(--currentId).classList;
+        toggleVisabilityOfOneReview(hiddenClassList);
+    } else {
+        currentId = 3;
+        var hiddenClassList = document.getElementById(currentId).classList;
+        toggleVisabilityOfOneReview(hiddenClassList);
+    }
 }
 
 function reviewRight() {
-    document.getElementsByClassName('shows')[0].classList.add('hidden');
-    var reviewsHidden = document.getElementsByClassName('review hidden');
-    reviewsHidden[1].classList.toggle('hidden');
+    var currentId = document.getElementsByClassName('shows')[0].id;
+    var currentClassList = document.getElementsByClassName('shows')[0].classList;
+    toggleVisabilityOfOneReview(currentClassList);
+
+    if (currentId < 3) {
+        var hiddenClassList = document.getElementById(++currentId).classList;
+        toggleVisabilityOfOneReview(hiddenClassList);
+    } else {
+        currentId = 1;
+        var hiddenClassList = document.getElementById(currentId).classList;
+        toggleVisabilityOfOneReview(hiddenClassList);
+    }
+}
+function toggleVisabilityOfOneReview(classList) {
+    classList.toggle('hidden');
+    classList.toggle('shows');
 }

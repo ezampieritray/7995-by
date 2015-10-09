@@ -44,11 +44,21 @@ section {
 section div {
     height: 100px;
 }
+#about-title {
+    width: 751px;
+    margin: auto;
+    margin-top: 100px;
+    background: url('images/about.png') no-repeat center;
+    padding-left: 20%;
+}
 #time {
     background: url("images/time.png") no-repeat center;
 }
 #stuff {
     background: url("images/staff.png") no-repeat center;
+}
+#special {
+    background: url("images/special.png") no-repeat center;
 }
 #price {
     background: url("images/price.png") no-repeat center;
@@ -60,19 +70,32 @@ section div {
     background: url("images/clients.png") no-repeat center;
 }
 
+
+#form-desc {
+    font-size: 26px;
+    vertical-align: middle;
+    margin-top: 100px;
+}
 form {
-    display: block;
-    width: 500px;
     margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    border: 5px lightgreen solid;
+    border-radius: 14px;
+    padding: 20px;
 }
 form div {
     margin-top: 15px;
 }
+#form {
+    border-left: 7px lightgreen solid;
+    padding: 18px;
+}
 
 .review {
     width: 70%;
+    height: 300px;
     margin: auto;
+    font-style: italic;
 }
 .hidden {
     display: none;
@@ -93,7 +116,7 @@ form div {
 }
 .right {
     float: right;
-    margin-top: -100px;
+    margin-top: -300px;
 }
 
 
