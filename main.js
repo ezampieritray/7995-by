@@ -1,13 +1,10 @@
-ymaps.ready(init);
-
-function init () {
+ymaps.ready(function() {
     var myMap = new ymaps.Map("map", {
             center: [53.90, 27.60],
             zoom: 11
         }, {
             searchControlProvider: 'yandex#search'
         });
-
     myMap.geoObjects
         .add(new ymaps.Placemark([53.941135, 27.599812], {
             balloonContent: 'Минск Мележа 1 (офис 23)'
@@ -21,4 +18,14 @@ function init () {
             preset: 'islands#circleIcon',
             iconColor: '#3caa3c'
         }));
+});
+
+function reviewLeft() {
+
+}
+
+function reviewRight() {
+    document.getElementsByClassName('shows')[0].classList.add('hidden');
+    var reviewsHidden = document.getElementsByClassName('review hidden');
+    reviewsHidden[1].classList.toggle('hidden');
 }

@@ -1,6 +1,5 @@
 header, main {
     margin: 10px;
-    justify-content: space-between;
 }
 
 nav a {
@@ -8,8 +7,7 @@ nav a {
 }
 
 header {
-    display: flex;
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 #logo {
@@ -17,12 +15,12 @@ header {
 }
 
 #phones {
-    
-text-align: right;
+    text-align: right;
+    float: right;
     font-size: 30px;   
+    margin-top: -120px;
 } #prefix {
     font-size: 40px;
-    
 }
 
 #phones a {
@@ -32,7 +30,7 @@ text-align: right;
 h1 {
     text-align: center;
 }
-#warranty {
+#warranty-text {
     text-align: center;
     font-size: 40px;
     line-height: 0;
@@ -40,9 +38,69 @@ h1 {
 
 section {
     margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+section div {
+    height: 100px;
+}
+#time {
+    background: url("images/time.png") no-repeat center;
+}
+#stuff {
+    background: url("images/staff.png") no-repeat center;
+}
+#price {
+    background: url("images/price.png") no-repeat center;
+}
+#warranty {
+    background: url("images/warranty.png") no-repeat center;
+}
+#clients {
+    background: url("images/clients.png") no-repeat center;
 }
 
+form {
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+form div {
+    margin-top: 15px;
+}
+
+.review {
+    width: 70%;
+    margin: auto;
+}
+.hidden {
+    display: none;
+}
+.arrow {
+    font-size: 70px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.left {
+    margin-top: 3px;
+    float: left;
+}
+.right {
+    float: right;
+    margin-top: -100px;
+}
+
+
+
+
 html, body, #map {
+    font-family: sans-serif;
     width: 100%; 
     height: 80%; 
     padding: 0; 
