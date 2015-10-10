@@ -1,3 +1,12 @@
+window.onload = function() {
+   MaskedInput({
+      elm: document.getElementById('phone'),
+      format: '+375 (__) ___-__-__',
+      separator: '+375 ()-'
+   });
+};
+
+
 ymaps.ready(function() {
     var myMap = new ymaps.Map("map", {
             center: [53.90, 27.60],
@@ -34,7 +43,6 @@ function reviewLeft() {
         toggleVisabilityOfOneReview(hiddenClassList);
     }
 }
-
 function reviewRight() {
     var currentId = document.getElementsByClassName('shows')[0].id;
     var currentClassList = document.getElementsByClassName('shows')[0].classList;
@@ -66,15 +74,7 @@ function send() {
             console.log(xhttp.responseText);
         }
     }
-    xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Заявка%20с%207995.by&message[html]=xxxxxx&key=oxdROOvCpKCp6InvVDqiGw', true);
+    var message = 'Модель: ' + model + '<br>Что случилось: ' + problem + '<br>Имя: ' + name + '<br>Телефон: ' + phone;
+    xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Заявка%20с%207995.by&message[html]='+message+'&key=oxdROOvCpKCp6InvVDqiGw', true);
     xhttp.send();
-
-//     var form = document.createElement('form');
-//     form.setAttribute('method', 'POST');
-//     form.setAttribute('action', 'https://mandrillapp.com/api/1.0/messages/send.json');
-//     form.setAttribute('email', 'zdanevich.vitaly@ya.ru');
-//     form.setAttribute('subject', 'Заявка с 7995.by');
-//     form.setAttribute('html', 'This is the temp body');
-//     form.submit();
-
 }
