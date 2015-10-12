@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
+        <img id="image-background" src="images/background.jpg" alt="мужик чинить компьютер" />
         <nav>
             <a href="#main">Главная</a>
             <a href="#feautures">Особенности</a>
@@ -15,24 +16,16 @@
         </nav>
         <header>
             <img src="images/logo.png" src="logo" />
-            <div id="slogan">сертифицированный сервис <div style="margin-left:90px">в Минске</div></div>
+            <div id="slogan">сертифицированный<div style="margin-left:15px">сервис в Минске</div></div>
             <div id="phones">
-                <table>
-                    <td>
-                        <span id="prefix">+375</span>
-                    </td>
-                    <td>
-                        <a href="tel:+375(29)685-86-82">685-86-82</a>
-                        <a href="tel:+375(29)501-53-81">501-53-81</a>
-                    </td>
-                </table>
-                <a href="tel:7995">7995</a>
+                <a href="tel:+375(29)501-53-81">+375 (29) 501-53-81</a>
+                <div>короткий номер: <a href="tel:7995">7995</a></div>
             </div>
         </header>
         <main>
             <h1>Ремонт бытовой техники и электроники любой сложности</h1>
             <div id="warranty-text">100% гарантия</div>
-            <h2 id="about-title">О нас</h2>
+            <h2 id="about-title">Особенности нашей компании</h2>
             <section>
                 <div id="stuff">10 лет - минимальный профессиональный стаж наших работников</div>
                 <div id="price">От 150 клиентов в месяц</div>
@@ -47,13 +40,11 @@
                     <div>Модель устройства:</div><input type="text" id="model">
                     <div>Что случилось?</div><textarea rows="5" cols="50" id="problem"></textarea>
                     <div>Имя:</div><input type="text" id="name">
-                    <div>Телефон:</div>  <input id="phone" 
-                                             type="tel" 
-                                             name="phone" 
-                                             value="+375 (__) ___-__-__" 
-                                             pattern="^\D*(?:\d\D*){9,}$" 
-                                             required>
-                    <div><div class="action-button" onclick="send()">Узнать стоимость</div></div>    
+                    <div>Телефон:</div><input id="phone" >
+                    <div><div class="action-button" onclick="send()"
+                                                    value="+375 (__) ___-__-__" 
+                                                    pattern="^\+375\((17|29|33|44)\)[0-9]{3}-[0-9]{2}-[0-9]{2}$"
+                         >Узнать стоимость</div></div>    
                 </div>
             </form>
             <h2>Отзывы</h2>
@@ -64,12 +55,13 @@
             <span class="arrow right" onclick="reviewRight()">❭</span>
             <h2>С нами уже работают</h2>
         </main>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script>
+        <p>Мележа 1 офис 23 и Одоевского 28 офис 8:</p>
+        <div id="map"></div>
         <footer>
             ООО "РедГранд"; р\с 3012153100012 в ЗАО "МТбанк", код 117; УНП 191755014
         </footer>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <script src="main.js" type="text/javascript"></script>
-        <div id="map"></div>
     </body>
         <script src="masked_input_1.4-min.js" type="text/javascript"></script>
 </html>

@@ -7,7 +7,7 @@ nav a {
 }
 
 header {
-    margin-top: 16px;
+    margin-top: -3px;
 }
 
 #logo {
@@ -17,39 +17,44 @@ header {
 #phones {
     text-align: right;
     float: right;
-    font-size: 30px;   
-    margin-top: -120px;
+    font-size: 25px;   
+    margin-top: -79px;
 } #prefix {
     font-size: 40px;
 }
 
-#phones a {
-    display: block;
-}
-
 h1 {
     text-align: center;
+    font-weight: normal;
 }
 #warranty-text {
     text-align: center;
     font-size: 40px;
     line-height: 0;
 }
+#image-background {
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+}
 
 section {
-    margin-top: 60px;
+    margin-top: 33px;
     display: flex;
     justify-content: space-around;
 }
 section div {
-    height: 100px;
+    height: 118px;
+    padding: 4.5%;
+    background-position-y: 2px !important;
+    text-align: center;
 }
 #about-title {
     width: 751px;
-    margin: auto;
-    margin-top: 100px;
+    margin-top: 56%;
     background: url('images/about.png') no-repeat center;
-    padding-left: 20%;
+    padding-left: 9%;
+    color: #fff;
 }
 #time {
     background: url("images/time.png") no-repeat center;
@@ -144,14 +149,30 @@ form div {
     float: right;
     margin-top: -300px;
 }
-
+footer {
+	background-color: #474747;
+	position: absolute;
+	width: 500px;
+}
 
 
 
 html, body, #map {
     font-family: sans-serif;
-    width: 100%; 
+    width: 90%; 
     height: 80%; 
     padding: 0; 
     margin: 0;
+}
+#map {
+	background-color: #000;
+}
+
+a {
+	color: yellowgreen;
+	/* box-shadow: -3px -3px 34px #000; */
+}
+
+p {
+	margin: 5px;
 }
