@@ -2,6 +2,12 @@ header, main {
     margin: 10px;
 }
 
+#main-text {
+	height: 120px;
+	background: rgba(255, 255, 255, 0.68);
+	text-shadow: 1px 1px 16px gray;
+}
+
 nav a {
 	margin: 6px 10% 0 4%;
 	display: inline-block;
@@ -29,7 +35,13 @@ header {
 h1 {
     text-align: center;
     font-weight: normal;
+    font-size: 44px;
 }
+h2 {
+	margin-top: 72px;
+	text-align: center;
+}
+
 #warranty-text {
     text-align: center;
     font-size: 40px;
@@ -53,11 +65,10 @@ section div {
     text-align: center;
 }
 #about-title {
-    width: 751px;
+    width: 100%;
     margin-top: 36%;
-    background: url('images/about.png') no-repeat center;
-    padding-left: 9%;
     color: #fff;
+    background: green;
 }
 #time {
     background: url("images/time.png") no-repeat center;
@@ -106,6 +117,7 @@ form {
     width: 80%;
     margin: auto;
     margin-top: -5%;
+    margin-bottom: 65px;
 }
 form div {
     margin-top: 15px;
@@ -141,14 +153,21 @@ form div {
 	box-shadow: 0 2px 11px #43F553, 0 1px 8px 1px rgba(0, 0, 0, 0.4);
 }.action-button:active {
 	transform: translate(0, 5px);
+}.center-button {
+	display: block;
+	width: 129px;
+	margin: auto;
 }
 
 
 .review {
     width: 70%;
-    height: 210px;
+    height: 193px;
     margin: auto;
     font-style: italic;
+}
+.name {
+	color: gray;
 }
 .hidden {
     display: none;
@@ -169,12 +188,12 @@ form div {
 }
 .right {
     float: right;
-    margin-top: -205px;
+    margin-top: -192px;
 }
 
 #brands div {
 	display: inline-flex;
-	margin: 0 40px 34px 40px;
+	margin: 0 84px 34px 40px;
 }
 
 #vidal {
@@ -246,7 +265,7 @@ form div {
 
 html, body, #map {
     font-family: sans-serif; 
-    height: 80%; 
+    height: 90%; 
     padding: 0; 
     margin: 0;
 }
@@ -257,7 +276,7 @@ html, body, #map {
 	position: absolute;
 	background-color: #474747;
 	width: 99%;
-	height: 50%;
+	height: 71%;
 	text-align: right;
 	color: #fff;
 }
@@ -268,4 +287,33 @@ a {
 
 p {
 	margin: 5px;
+}
+
+footer {
+	margin: 20px;
+}
+
+#modal-send-review {
+	position: fixed;
+	top: 10%;
+	left: 30%;
+	width: 40%;
+	height: 300px;
+	background: rgba(0, 0, 0, 0.8);
+}
+#users-review {
+	display: block;
+	width: 465px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.button-wide {
+	width: 140px;
+}
+.close {
+	color: #fff;
+	margin: 10px;
+	cursor: pointer;
+	float: right;
 }
