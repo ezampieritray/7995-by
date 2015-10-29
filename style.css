@@ -10,6 +10,9 @@ header, main {
 #slogan {
 	font: 23px 'PF Din Comp Pro Regular';
 }
+.short-number {
+	text-shadow: 1px 1px 16px #fff;
+}
 
 #main-text {
 	background: rgba(255, 255, 255, 0.68);
@@ -32,8 +35,8 @@ header {
 
 #phones {
     text-align: right;
-    font: 32px 'PF Din Comp Pro Regular';
-    margin: -123px 1%;
+    font: 40px 'PF Din Comp Pro Regular';
+    margin: -131px 1%;
     float: right;
 } #phones a {
     color: lightblue;
@@ -72,10 +75,10 @@ section div {
 }
 #about-title {
 	font: 32px 'PF Din Comp Pro Regular';
-    width: 100%;
-    margin-top: 36%;
-    color: #fff;
-    background: green;
+	width: 100%;
+	margin-top: 25%;
+	color: #fff;
+	background: green;
 }
 #time {
     background: url("images/time.png") no-repeat center;
@@ -326,8 +329,27 @@ footer {
 	float: right;
 }
 
-@media (max-width: 830px) {
-	html {
-/* 		width: 830px; */
+@media (max-width: 980px) {
+	#about-title {
+		margin-top: 15%;
+	}
+	section div {
+		font-size: 200%;
+		padding: 8% 1% 6% 1%;
+	}
+	form {
+		width: 100%;
+	}
+	form div, #how-much {
+		font-size: 60px;
+	}
+	#form-desc p {
+		font-size: 40px;
+	}
+	.action-button {
+		font-size: 70px !important;
+	}
+	input {
+		font-size: 40px;
 	}
 }
