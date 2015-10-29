@@ -1,5 +1,14 @@
+@font-face {
+	font-family: 'PF Din Comp Pro Regular';
+	src: url(pf_din_regular.ttf);
+}
+
 header, main {
     margin: 10px;
+}
+
+#slogan {
+	font: 23px 'PF Din Comp Pro Regular';
 }
 
 #main-text {
@@ -25,24 +34,27 @@ header {
 #phones {
     text-align: right;
     float: right;
-    font-size: 25px;   
-    margin: -79px 19px;
+    font: 29px 'PF Din Comp Pro Regular';
+    margin: -123px 19px;
 } #phones a {
     color: lightblue;
     text-shadow: 1px 1px 2px #000;
 }
 
 h1 {
+	font: 20px 'PF Din Comp Pro Regular';
     text-align: center;
     font-weight: normal;
     font-size: 44px;
 }
 h2 {
+	font: 20px 'PF Din Comp Pro Regular';
 	margin-top: 72px;
 	text-align: center;
 }
 
 #warranty-text {
+	font: 20px 'PF Din Comp Pro Regular', Arial, sans-serif;
     text-align: center;
     font-size: 40px;
     line-height: 0;
@@ -59,12 +71,14 @@ section {
     justify-content: space-around;
 }
 section div {
+	font: 20px 'PF Din Comp Pro Regular', Arial, sans-serif;
     height: 118px;
     padding: 4.2%;
     background-position-y: 2px !important;
     text-align: center;
 }
 #about-title {
+	font: 32px 'PF Din Comp Pro Regular';
     width: 100%;
     margin-top: 36%;
     color: #fff;
@@ -102,7 +116,7 @@ section div {
 	padding: 15px;
 	vertical-align: middle;
 	margin-top: -20px;
-	font-size: 18px;
+	font: 23px 'PF Din Comp Pro Regular';
 }
 #how-much {
 	font-size: 30px;
@@ -123,23 +137,22 @@ form div {
     margin-top: 15px;
 }
 #form {
-	padding: 18px;
-    
+	font: 23px 'PF Din Comp Pro Regular';
+	padding: 18px;    
 	background-color: rgba(0, 0, 0, 0.7);
-    
     color: #fff;
 }
 .action-button {
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(255, 153, 37)), color-stop(0.49, rgb(228, 144, 71)), color-stop(0.5, rgb(232, 127, 40)), color-stop(1, rgb(212, 108, 5)) );
 	box-shadow: inset 0 0 2px rgba(255,255,255,.2) ,inset 0 0 0 rgba(255,255,255,.2) ,0 2px 0 #C37530 ,0 0 0 #C76414 ,0 0 0 #A9690D ,0 0 0 rgba(0,0,0,.5);
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-	font-size: 16px;
+	font: 26px 'PF Din Comp Pro Regular';
 	font-weight: bold;
 	position: relative;
 	padding: 3px 27px 0;
 	border-radius: 4px;
 	color: #FFF;
-	line-height: 26px;
+	line-height: 32px;
 	height: 32px;
 	text-decoration: none;
 	display: inline-flex;
@@ -273,6 +286,7 @@ html, body, #map {
 	width: 80%;
 }
 #map-box {
+	font: 23px 'PF Din Comp Pro Regular';
 	position: absolute;
 	background-color: #474747;
 	width: 99%;
@@ -291,6 +305,7 @@ p {
 
 footer {
 	margin: 20px;
+	font: 23px 'PF Din Comp Pro Regular';
 }
 
 #modal-send-review {
