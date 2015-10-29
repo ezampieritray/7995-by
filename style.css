@@ -32,7 +32,7 @@ header {
 
 #phones {
     text-align: right;
-    font: 29px 'PF Din Comp Pro Regular';
+    font: 4vw 'PF Din Comp Pro Regular';
     margin: -123px 1%;
     float: right;
 } #phones a {
@@ -328,6 +328,6 @@ footer {
 
 @media (max-width: 830px) {
 	html {
-		width: 830px;
+/* 		width: 830px; */
 	}
 }
