@@ -84,17 +84,6 @@ function handleForm() {
 function isEnter(e) {
     if (e.keyCode == 13) handleForm();
 }
-function sendRequest(model, problem, name, phone) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            alert('Заявка отправлена, скоро мы вам позвоним');
-        }
-    }
-    var message = 'Модель: ' + model + '<br>Что случилось: ' + problem + '<br>Имя: ' + name + '<br>Телефон: ' + phone;
-    xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Заявка%20с%207995.by&message[html]='+message+'&key=oxdROOvCpKCp6InvVDqiGw', true);
-    xhttp.send();
-}
 
 function showModal() {
     if (document.getElementById('modal-send-review').style.display == 'none')
@@ -109,12 +98,28 @@ function handleKey(e) {
         document.getElementById('modal-send-review').style.display = 'none';
 }
 
+function sendRequest(model, problem, name, phone) {
+    document.getElementById('page').className = 'waiting';
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            alert('Заявка отправлена, скоро мы вам позвоним');
+            document.getElementById('page').className = '';
+        }
+    }
+    var message = 'Модель: ' + model + '<br>Что случилось: ' + problem + '<br>Имя: ' + name + '<br>Телефон: ' + phone;
+    xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Заявка%20с%207995.by&message[html]='+message+'&key=oxdROOvCpKCp6InvVDqiGw', true);
+    xhttp.send();
+}
+
 function sendReview() {
+    document.getElementById('page').className = 'waiting';
     var review = document.getElementById('users-review').value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             alert('Ваш отзыв отправлен, спасибо, мы его изучим - нам важно чтобы вы были довольны')
+            document.getElementById('page').className = '';
         }
     }
     xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Отзыв%20с%207995.by&message[html]='+review+'&key=oxdROOvCpKCp6InvVDqiGw', true);
