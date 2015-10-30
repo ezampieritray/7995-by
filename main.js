@@ -99,7 +99,7 @@ function handleKey(e) {
 }
 
 function sendRequest(model, problem, name, phone) {
-    document.getElementById('page').className = 'waiting';
+    document.getElementsByTagName('html')[0].className = 'waiting';
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -113,7 +113,7 @@ function sendRequest(model, problem, name, phone) {
 }
 
 function sendReview() {
-    document.getElementById('page').className = 'waiting';
+    document.getElementsByTagName('html')[0].className = 'waiting';
     var review = document.getElementById('users-review').value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
