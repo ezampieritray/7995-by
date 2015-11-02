@@ -85,13 +85,6 @@ function isEnter(e) {
     if (e.keyCode == 13) handleForm();
 }
 
-function showModal() {
-    if (document.getElementById('modal-send-review').style.display == 'none')
-        document.getElementById('modal-send-review').style.display = 'block';
-    else 
-        document.getElementById('modal-send-review').style.display = 'none';
-}
-
 document.onkeydown = handleKey;
 function handleKey(e) {
     if (e.keyCode == 27) // esc
@@ -124,4 +117,20 @@ function sendReview() {
     }
     xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Отзыв%20с%207995.by&message[html]='+review+'&key=oxdROOvCpKCp6InvVDqiGw', true);
     xhttp.send();
+}
+
+
+function showModal() {
+    if (document.getElementById('modal-send-review').style.display == 'none')
+        location.hash = 'review';
+    else
+        location.hash = 'reviews';
+}
+
+window.onhashchange = function() {
+    if (document.getElementById('modal-send-review').style.display == 'block')
+        document.getElementById('modal-send-review').style.display = 'none';
+    else
+        document.getElementById('modal-send-review').style.display = 'block';
+    return null;    
 }
