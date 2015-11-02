@@ -291,8 +291,8 @@ footer {
 #modal-send-review {
 	position: fixed;
 	top: 10%;
-	left: 30%;
-	width: 40%;
+	left: 0%;
+	width: 100%;
 	height: 300px;
 	background: rgba(0, 0, 0, 0.8);
 }
@@ -375,5 +375,8 @@ footer {
 	}
 	footer {
 		font-size: 13px;
+	}
+	#modal-send-review {
+		height: 500px;
 	}
 }
