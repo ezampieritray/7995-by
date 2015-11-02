@@ -119,7 +119,7 @@ function sendReview() {
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             alert('Ваш отзыв отправлен, спасибо, мы его изучим - нам важно чтобы вы были довольны')
-            document.getElementById('page').className = '';
+            document.getElementsByTagName('html')[0].className = '';
         }
     }
     xhttp.open('GET', 'https://mandrillapp.com/api/1.0/messages/send.json?message[from_email]=mail@7995.by&message[to][0][email]=zdanevich.vitaly@ya.ru&message[subject]=Отзыв%20с%207995.by&message[html]='+review+'&key=oxdROOvCpKCp6InvVDqiGw', true);
