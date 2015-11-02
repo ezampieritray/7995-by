@@ -379,7 +379,7 @@ footer {
 	#modal-send-review {
 		height: 500px;
 	}
-	form {
-		display: initial;
+	section, form {
+		display: block;
 	}
 }
