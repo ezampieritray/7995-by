@@ -254,6 +254,7 @@ form div {
 
 
 html, body, #map {
+	background-color: #fff;
     font-family: sans-serif; 
     height: 90%; 
     padding: 0; 
